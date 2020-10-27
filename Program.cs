@@ -9,6 +9,7 @@ namespace env_var_configuration_example
         {
 
             Environment.SetEnvironmentVariable("THIS__IS__AN__EXAMPLE__KEY", "example-value");
+            Environment.SetEnvironmentVariable("THIS_IS_ANOTHER_EXAMPLE_KEY", "example-value-2");
 
             var builder = new ConfigurationBuilder()
            .AddEnvironmentVariables();
@@ -20,6 +21,10 @@ namespace env_var_configuration_example
 
             var doesNotWork = configuration.GetValue<string>("THIS__IS__AN__EXAMPLE__KEY");
             Console.WriteLine($"This does not work: {doesNotWork}");
+
+            works = configuration.GetValue<string>("THIS_IS_ANOTHER_EXAMPLE_KEY");
+            Console.WriteLine($"This works as well, and the value is: `{works}`");
+
         }
     }
 }
