@@ -1,7 +1,8 @@
 # env-var-configuration-example
 
 To get my head around configuration .NET when moving hierarchical `appsettings.json`
-files to environment variables on a Linux box. 
+files to environment variables on a Linux box. I wrote some words about it 
+[here](http://fjukstad.github.io/blog/config-and-environment-variables/).
 
 ```bash
 $ dotnet run
